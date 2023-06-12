@@ -1,0 +1,299 @@
+/*
+Theme Name: Bootship
+Theme URI: http://intside.com/themes/bootship/
+Author: Intside
+Author URI: http://intside.com/
+Description: Bootship is a startup theme for Advanced user who want to build professional WordPress theme based on Bootstrap
+Version: 0.1
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: blue, black, white, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: bootship
+
+This theme is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Basic Structure
+ * 2.0 - Media Queries
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 1.0 Basic Structure
+ * ----------------------------------------------------------------------------
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 400;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+:root {
+  --color-primary: #ff8800;
+  --color-secondary: #fff8f0;
+}
+h1, h2, h5 {
+  font-weight: 700;
+}
+h1{
+  font-size: 3rem;
+}
+h2{
+  font-size: 2.5rem;
+}
+h6{
+  font-size: 1.125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+span {
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #FFFFFF;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  color: #ffffff;
+}
+.btn-outline-primary {
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  color: var(--color-primary);
+}
+
+.btn:hover {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-check:focus + .btn,
+.btn:focus {
+  color: #ffffff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: none !important;
+}
+
+/* banner */
+.banner {
+  background-color: var(--color-secondary);
+  padding: 8.5rem 0 2.5rem;
+}
+.banner-map {
+  background: url("./images/map-benin.png") no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.banner-title{
+  color: var(--color-primary);
+}
+/* banner mini */
+.banner-mini {
+  background-color: #1a1817;
+  padding: 2.5rem;
+  color: #ffffff;
+}
+/* discover */
+
+.discover {
+  padding: 5rem 0;
+}
+.discover .card {
+  margin-right: 1.125rem;
+  margin: 0 1rem;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+ 
+.slick-dots li button:before {
+  font-size: 1rem;
+  color: #000;
+}
+.slick-dots li.slick-active button:before {
+  color: #000 !important;
+}
+.discover .monney{
+  color: var(--color-primary);
+}
+.discover .currency{
+  font-size: 0.625rem;
+}
+.discover .start{
+  color: var(--color-primary);
+}
+
+/* about */
+.about {
+  padding: 8.5rem 0;
+  background-color: var(--color-secondary);
+}
+.about-2 {
+  position: absolute;
+  top: -5rem;
+  left: -6.5rem;
+  z-index: 1;
+}
+/* //.move img  */
+.about-3 {
+  position: absolute;
+  bottom: -5rem;
+  right: 6.5rem;
+  z-index: 1;
+}
+/* service */
+.service {
+  padding: 5rem 0;
+}
+.service-blog {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 16px;
+ 
+}
+.service-blog:hover {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  transition: all ease-in-out 0.5s;
+}
+.service-blog:hover .service-mini-blog{
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  transition: all ease-in-out 0.5s;
+}
+.service-mini-blog {
+  display: inline-block;
+  background-color: var(--color-primary);
+  font-size: 2.125rem;
+  margin-bottom: 1rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  text-align: center;
+  line-height: 2.2;
+  border-radius: 1rem;
+  color: #FFFFFF;
+}
+/* newsletter */
+.newsletter{
+  margin: 0 0 5rem;
+}
+.newsletter-blog {
+  background: linear-gradient(0turn, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/newsletter.png") no-repeat;
+  background-size: cover;
+  padding: 5rem;
+  text-align: center;
+  border: 1px black solid;
+  border-radius: 1rem;
+  color: #FFFFFF;
+}
+.newsletter button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* footer */
+footer a {
+  margin: 0 1rem;
+  color: #FFFFFF;
+}
+
+.foot-1 {
+  background-color: var(--color-secondary);
+  padding: 2.5rem 0;
+}
+.foot-icon a {
+  display: inline-block;
+  background-color: var(--color-primary);
+  width: 2rem;
+  height: 2rem;
+  line-height: 2;
+  border-radius: 50%;  
+}
+.foot-2{
+  background-color: var(--color-primary);
+  padding: 2.5rem 0;
+}
+.foot-3{
+  background-color: #1A1817;
+  color: #FFFFFF;
+}
+.name-web{
+  text-transform: uppercase;
+}
+
+
+
+}
+/**
+ * 2.0 Media Queries
+ * ----------------------------------------------------------------------------
+ */
+
+/* WordPress Media Queries */
+@media (max-width: 600.98px) {
+}
+@media (min-width: 601px) and (max-width: 782.98px) {
+}
+@media (min-width: 783px) {
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* Small devices (landscape phones, 576px, up to 768px) */
+@media (max-width: 576px) {
+  .newsletter button {
+    position: initial;
+  }
+}
+@media (max-width: 768px) {
+  .newsletter-blog {
+    padding: 2rem;
+  }
+  .newsletter-blog h2 {
+    font-size: 1.125rem;
+  }
+}
+/* Medium devices (tablets, 768px, up to 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, 992px, up to 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* X-Large devices (large desktops, 1200px, up to 1400px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
